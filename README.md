@@ -47,3 +47,13 @@ You can see progress in the drawer-at-the-bottom-of-the-screen, and the *Instanc
 
  * URL: https://manage.windowsazure.com
  * Account: Your Office 365 account (select "Organizational Account" if asked).
+ 
+# PDF rendering settings
+
+**Hmm:** Do we really need these?
+
+Depending on the DPI of the server, configure the zoom in `pdf.css` (**where?**) in order to get the best pdf-view.
+
+ * 96 DPI = zoom 0.8(default)
+ * 120 DPI = zoom 1
+ * 144 DPI = zoom 1.2
