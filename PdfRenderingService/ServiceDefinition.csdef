@@ -1,18 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="PdfRenderingService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2013-10.2.2">
   <WebRole name="PdfRenderingService.WebRole" vmsize="Small">
     <Sites>
       <Site name="Web">
         <Bindings>
           <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="HttpsIn" endpointName="HttpsIn" />
         </Bindings>
       </Site>
     </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="HttpsIn" protocol="https" port="443" certificate="SampleCertificate" />
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
+    <Certificates>
+      <Certificate name="*.valtech.se" storeLocation="LocalMachine" storeName="CA" />
+    </Certificates>
   </WebRole>
 </ServiceDefinition>
