@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="PdfRenderingService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2013-10.2.2">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="PdfRenderingService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
   <WebRole name="PdfRenderingService.WebRole" vmsize="Small">
     <Sites>
       <Site name="Web">
@@ -11,13 +11,15 @@
     </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
-      <InputEndpoint name="HttpsIn" protocol="https" port="443" certificate="SampleCertificate" />
+      <InputEndpoint name="HttpsIn" protocol="https" port="443" certificate="valtech.se" />
     </Endpoints>
     <Imports>
-      <Import moduleName="Diagnostics" />
     </Imports>
     <Certificates>
-      <Certificate name="*.valtech.se" storeLocation="LocalMachine" storeName="CA" />
+      <Certificate name="valtech.se" storeLocation="LocalMachine" storeName="CA" />
     </Certificates>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
   </WebRole>
 </ServiceDefinition>

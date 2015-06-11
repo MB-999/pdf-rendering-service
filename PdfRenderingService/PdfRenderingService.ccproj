@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>2.2</ProductVersion>
+    <ProductVersion>2.6</ProductVersion>
     <ProjectGuid>961f568b-32b3-4d26-8567-ac555d837721</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -51,14 +51,12 @@
     <Folder Include="PdfRenderingService.WebRoleContent\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PdfRenderingService.WebRoleContent\diagnostics.wadcfg">
-      <SubType>Content</SubType>
-    </Content>
+    <DiagnosticsConfiguration Include="PdfRenderingService.WebRoleContent\diagnostics.wadcfgx" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
-    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.2\</CloudExtensionsDir>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.6\</CloudExtensionsDir>
   </PropertyGroup>
   <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
 </Project>

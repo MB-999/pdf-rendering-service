@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "PdfRenderingService", "PdfRenderingService.ccproj", "{961F568B-32B3-4D26-8567-AC555D837721}"
 EndProject

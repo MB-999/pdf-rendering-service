@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ServiceConfiguration serviceName="PdfRenderingService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="PdfRenderingService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2015-04.2.6">
   <Role name="PdfRenderingService.WebRole">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="valtech.se" thumbprint="1AD7FF55DB95007A84C991CC924A9C44C82ECFFF" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>
