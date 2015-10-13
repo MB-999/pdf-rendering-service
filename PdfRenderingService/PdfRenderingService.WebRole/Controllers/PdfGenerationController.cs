@@ -3,6 +3,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Rotativa;
+using Rotativa.Options;
 
 namespace PdfRenderingService.WebRole.Controllers
 {
@@ -21,7 +22,9 @@ namespace PdfRenderingService.WebRole.Controllers
 
             var filename = Request.QueryString["filename"];
 
-            var view = new UrlAsPdf(url);
+            var rotativaLibsPath = Server.MapPath("~/Rotativa-Custom");
+
+            var view = new UrlAsPdf(url) { WkhtmlPath = rotativaLibsPath };
             if (!string.IsNullOrEmpty(filename))
             {
                 view.FileName = filename;
